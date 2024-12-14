@@ -42,8 +42,6 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>['auth']], function
 // EDITOR AND ADMIN
 Route::group(['middleware'=>['auth','roles'],'roles'=>['editor','admin']], function(){
 
-    // Route::get('/dashboard', function(){ return view('backend.dashboard'); })->name('dashboard');
-
     Route::get('dashboard','DashboardController@index')->name('dashboard');
     Route::get('profile','ProfileController@profile')->name('profile');
     Route::post('profile','ProfileController@profileUpdate')->name('profile.update');

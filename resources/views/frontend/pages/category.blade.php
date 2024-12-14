@@ -46,27 +46,6 @@
                     <img src="{{ asset('images/advertisements/'.$advertisements->body_middle) }}" alt="Ads" class="width-100">
                 @endif
 
-                {{-- <div class="news-category-container">
-                    <div class="news-technology">
-                        @foreach($newscategorylist as $newscategory)
-                            <div class="section-item">
-                                <a href="{{ route('page.news',$newscategory->slug) }}">
-                                    <img src="{{ asset('images/'.$newscategory->image) }}" alt="{{ $newscategory->title }}" class="width-100">
-                                </a>
-                                
-                                <h3><a href="{{ route('page.news',$newscategory->slug) }}">{{ $newscategory->title }}</a></h3>
-
-                                <p>{{ $newscategory->details }}</p>
-
-                                <ul>
-                                    <li><i class="far fa-comment-alt"></i> <a href="#">{{ $newscategory->id }}</a></li>
-                                    <li><i class="far fa-clock"></i> {{ $newscategory->created_at->diffForHumans() }}</li>
-                                </ul>
-                            </div>
-                        @endforeach
-                    </div>
-                </div> --}}
-
                 <div class="news-category-container">
                     <h3 class="judul">Berita Terkini</h3>
                     <div class="news-category">
@@ -110,12 +89,6 @@
                                 
                                     <h3><a href="{{ route('page.news',$topnews->slug) }}">{{ $topnews->title }}</a></h3>
 
-                                    {{-- <p>{{ $topnews->details }}</p> --}}
-
-                                    {{-- <ul>
-                                        <li><i class="far fa-folder"></i> <a href="{{ route('page.category',$topnews->category->slug) }}">{{ $topnews->category->name }}</a></li>
-                                        <li><i class="far fa-clock"></i> {{ $topnews->created_at->diffForHumans() }}</li>
-                                    </ul> --}}
                             </div>
                         @endforeach
                     </div>

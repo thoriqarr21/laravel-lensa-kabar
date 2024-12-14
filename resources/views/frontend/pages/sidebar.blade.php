@@ -56,22 +56,6 @@
     </div>
 </div>
 
-{{-- <div class="sidebar-item">
-    <div class="sidebar-news news-with-image">
-        <h2>Sidebar News Image</h2>
-        @foreach($newscategory_two as $topnews)
-            <div class="section-item">
-                <div class="section-item-news">
-                    <a href="#">
-                        <img src="{{ asset('images/'.$newsinRandomOrder->image) }}" alt="{{ $newsinRandomOrder->title }}" class="width-100">
-                    </a>
-                    <h3><a href="{{ route('page.news',$topnews->slug) }}">{{ $topnews->title }}</a></h3>
-                </div>
-            </div>
-        @endforeach
-    </div>
-</div> --}}
-
 <div class="ads" style="padding-top: 0">
     @foreach ($headerads as $item)
         @if (request()->is('/') && $item->type == 'home')

@@ -28,12 +28,6 @@
                             <a href="{{ route('page.news',$topnews->slug) }}" class="title-overlay-title">{{ $topnews->title }}</a>
                         </div>
                     </div>
- 
-                
-                {{-- <ul>
-                    <li><i class="far fa-folder"></i> <a href="{{ route('page.category', $topnews->category->slug) }}">{{ $topnews->category->name }}</a></li>
-                    <li><i class="far fa-clock"></i> {{ $topnews->created_at->diffForHumans() }}</li>
-                </ul> --}}
             </div>
         @endforeach     
         </div>
@@ -102,13 +96,6 @@
                                 </div>
                                 
                                     <h3><a href="{{ route('page.news',$topnews->slug) }}">{{ $topnews->title }}</a></h3>
-
-                                    {{-- <p>{{ $topnews->details }}</p> --}}
-
-                                    {{-- <ul>
-                                        <li><i class="far fa-folder"></i> <a href="{{ route('page.category',$topnews->category->slug) }}">{{ $topnews->category->name }}</a></li>
-                                        <li><i class="far fa-clock"></i> {{ $topnews->created_at->diffForHumans() }}</li>
-                                    </ul> --}}
                             </div>
                         @endforeach
                     </div>
@@ -120,18 +107,8 @@
                         @foreach($newscategory_three as $topnews)
                             <div class="section-item">
                                 <a href="{{ route('page.news',$topnews->slug) }}" class="bg-image" style="background-image:url({{ asset('images/'.$topnews->image) }}); border-radius:4px; height:170px; max-height: auto;"></a>
-                                {{-- <a href="{{ route('page.news',$topnews->slug) }}">
-                                    <img src="{{ asset('images/'.$topnews->image) }}" alt="{{ $topnews->title }}" class="width-100">
-                                </a> --}}
                                 <div style="justify-items: start;  margin-bottom: 10px">
                                     <h3><a href="{{ route('page.news',$topnews->slug) }}">{{ $topnews->title }}</a></h3>
-    
-                                    {{-- @php
-                                    $cleanedDetails = str_replace(['<p> </p>', '<br><br>', '<p></p>'], '', $topnews->excerpt);
-                                @endphp
-                                <div class="text-container">
-                                    <p class="text-content">{!! $cleanedDetails !!}</p>  
-                                </div> --}}
     
                                     <ul class="ul-tech">
                                         <li><i class="far fa-folder"></i> <a href="{{ route('page.category',$topnews->category->slug) }}">{{ $topnews->category->name }}</a></li>

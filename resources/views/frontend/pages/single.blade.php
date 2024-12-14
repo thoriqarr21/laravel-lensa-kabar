@@ -36,8 +36,6 @@
 
                     <div class="section-item">
                         <img src="{{ asset('images/'.$newssingle->image) }}" alt="{{ $newssingle->title }}" class="width-100">
-
-                        {{-- <h1>{{ $newssingle->title }}</h1> --}}
                         <p class="single-p"><a href="{{ route('page.category',$newssingle->category->slug) }}"><i class="far fa-folder"></i> {{ $newssingle->category->name }}</a></p>
                         @php
                         $cleanedDetails = str_replace(['<p> </p>', '<br><br>', '<p></p>'], '', $newssingle->details);
@@ -46,10 +44,6 @@
                         <p class="text-content">{!! $cleanedDetails !!}</p>  
                     </div>
 
-                        {{-- <ul>                    
-                            <li><i class="far fa-comment-alt"></i> {{ $newssingle->id }}</li>
-                                    <li><i class="far fa-user"></i> {{ $newssingle->user->name }}</li> <!-- Menambahkan nama pengguna -->
-                        </ul> --}}
                     </div>
                     
 

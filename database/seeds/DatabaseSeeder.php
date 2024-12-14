@@ -44,8 +44,8 @@ class DatabaseSeeder extends Seeder
             ['name' => 'Editor','slug' => 'editor'],
         ]);
 
-        // News::factory(100)->create();
-        // Category::factory(9)->create();
+        News::factory(100)->create();
+        Category::factory(9)->create();
         
     }
 }
